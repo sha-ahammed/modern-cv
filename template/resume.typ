@@ -2,102 +2,95 @@
 
 #show: resume.with(
   author: (
-    firstname: "John",
-    lastname: "Smith",
-    email: "js@example.com",
-    homepage: "https://example.com",
-    phone: "(+1) 111-111-1111",
-    github: "DeveloperPaul123",
-    twitter: "typstapp",
-    scholar: "",
-    orcid: "0000-0000-0000-000X",
-    birth: "January 1, 1990",
-    linkedin: "Example",
-    address: "111 Example St. Example City, EX 11111",
+    firstname: "Sha Ahammed",
+    lastname: "Roze",
+    email: "shaa33086@gmail.com",
+    phone: "(+91) 9074102334",
+    github: "github.com/sha-ahammed",
+    linkedin: "linkedin.com/in/roze-sha",
     positions: (
       "Software Engineer",
-      "Software Architect",
-      "Developer",
-    ),
-    custom: (
-      (
-        text: "Youtube Channel",
-        icon: "youtube",
-        link: "https://example.com",
-      ),
+      "AI Engineer",
+      "Backend Developer",
     ),
   ),
   keywords: ("Engineer", "Architect"),
-  description: "John complete resume",
-  profile-picture: image("profile.png"),
+  description: "Sha's resume",
+  profile-picture: none,
   date: datetime.today().display(),
   language: "en",
   colored-headers: true,
   show-footer: false,
-  show-address-icon: true,
+  show-address-icon: false,
   paper-size: "us-letter",
 )
 
 = Experience
 
+// --- Merged Citrus Role ---
 #resume-entry(
   title: "Senior Software Engineer",
-  location: "Example City, EX",
-  date: "2019 - Present",
-  description: "Example, Inc.",
-  title-link: "https://github.com/DeveloperPaul123",
+  location: "Kochi, Kerala, India",
+  date: "Sep 2022 - Present",
+  description: "Citrus Informatics (India) Pvt Ltd",
 )
 
 #resume-item[
-  - #lorem(20)
-  - #lorem(15)
-  - #lorem(25)
+  - Engineered a middleware extension for AnythingLLM to support Okta-based SSO authentication, enhancing security and user management for enterprise deployments.
+  - Designed and developed backend for an Arabic transcription service with FastAPI and Celery.
+  - Developed an automatic database documentation tool that enhances SchemaSpy by adding Mermaid diagrams and JSDoc with GenAI.
+  - Developed a Flask-based wrapper for Azure AI Search, improving query performance by 35%
+  - Developed Image Classification models to identify Solar Installation viability for 100+ leads/day.
 ]
 
+// --- IQVIA ---
 #resume-entry(
-  title: "Software Engineer",
-  location: "Example City, EX",
-  date: "2011 - 2019",
-  description: "Previous Company, Inc.",
+  title: "Service Operations Specialist (Intern)",
+  location: "Kochi, Kerala, India",
+  date: "Dec 2021 - Aug 2022",
+  description: "IQVIA",
 )
 
 #resume-item[
-  // content doesn't have to be bullet points
-  #lorem(72)
+  - Performed implementation in test environments for internal teams.
+  - Provided application support to clients.
+  - Worked with internal ETL tools.
 ]
 
-#resume-entry(title: "Intern", location: "Example City, EX")
+// --- CUSAT ---
+#resume-entry(
+  title: "Programmer",
+  location: "Kochi, Kerala, India",
+  date: "2021",
+  description: "DOA, CUSAT",
+)
 
 #resume-item[
-  - #lorem(20)
-  - #lorem(15)
-  - #lorem(25)
+  - Wrote and reviewed code for admissions.cusat.ac.in.
+  - Made a Registration form for Department of Foreign Languages for online payment of fees.
+  - Contributed to development of internal tool for auditing financial records.
 ]
 
 = Projects
 
 #resume-entry(
-  title: "Thread Pool C++ Library",
-  location: [#github-link("DeveloperPaul123/thread-pool")],
-  date: "May 2021 - Present",
-  description: "Designer/Developer",
+  title: "Error Lens",
+  location: [#github-link("sha-ahammed/error-lens")],
+  description: "Rust",
 )
 
 #resume-item[
-  - Designed and implemented a thread pool library in C++ using the latest C++20 and C++23 features.
-  - Wrote extensive documentation and unit tests for the library and published it on Github.
+  - Extension for the Zed Editor that lets you see errors and warnings inline.
 ]
 
 #resume-entry(
-  title: "Event Bus C++ Library",
-  location: github-link("DeveloperPaul123/eventbus"),
-  date: "Sep. 2019 - Present",
-  description: "Designer/Developer",
+  title: "FFSpeak",
+  location: github-link("sha-ahammed/FFSpeak"),
+  description: "Python | Groq | Pytorch | SileroVAD",
 )
 
 #resume-item[
-  - Designed and implemented an event bus library using C++17.
-  - Wrote detailed documentation and unit tests for the library and published it on Github.
+  - FFSpeak is a powerful and user-friendly desktop application for transcribing audio and video files. It leverages advanced Voice Activity Detection (VAD) and the Groq API to provide fast, accurate, and efficient speech-to-text transcription.
 ]
 
 = Skills
@@ -105,72 +98,47 @@
 #resume-skill-item(
   "Programming Languages",
   (
-    strong("C++"),
-    strong("Python"),
-    "Rust",
-    "Java",
-    "C#",
+    "Python",
     "JavaScript",
     "TypeScript",
+    "Rust",
+    "SQL",
   ),
 )
-#resume-skill-item("Spoken Languages", (strong("English"), "Spanish"))
+#resume-skill-item("Frameworks", (
+  "FastAPI",
+  "Flask",
+  "Langchain",
+  "LangGraph",
+  "LlamaIndex",
+  "FastAI",
+  "PyTorch",
+  "SQLAlchemy",
+))
 #resume-skill-item(
-  "Programs",
+  "Tools",
   (
-    strong("Excel"),
-    "Word",
-    "Powerpoint",
-    "Visual Studio",
+    "Git",
+    "Github",
+    "Gitlab",
+    "Docker",
+    "AWS (Amazon Web Services)",
+    "Postgres",
+    "SQLite",
   ),
 )
-// spacing fix, not needed if you use `resume-skill-grid`
-#block(below: 0.65em)
 
-// An alternative way of list out your resume skills
-// #resume-skill-grid(
-//   categories_with_values: (
-//     "Programming Languages": (
-//       strong("C++"),
-//       strong("Python"),
-//       "Rust",
-//       "Java",
-//       "C#",
-//       "JavaScript",
-//       "TypeScript",
-//     ),
-//     "Spoken Languages": (
-//       strong("English"),
-//       "Spanish",
-//       "Greek",
-//     ),
-//     "Programs": (
-//       strong("Excel"),
-//       "Word",
-//       "Powerpoint",
-//       "Visual Studio",
-//       "git",
-//       "Zed"
-//     ),
-//     "Really Really Long Long Long Category": (
-//       "Thing 1",
-//       "Thing 2",
-//       "Thing 3"
-//     )
-//   ),
-// )
+#block(below: 0.65em)
 
 = Education
 
 #resume-entry(
-  title: "Example University",
-  location: "Example City, EX",
-  date: "August 2014 - May 2019",
-  description: "B.S. in Computer Science",
+  title: "School of Engineering, CUSAT",
+  location: "Kochi, Kerala, India",
+  date: "August 2016 - August 2020",
+  description: "B.Tech. in Electronics and Communication Engineering",
 )
 
 #resume-item[
-  - #lorem(20)
-  - #lorem(15)
-  - #lorem(25)
+  - During my four years of study, I learned various topics such as digital circuits, microprocessors, communication systems, signal processing, and embedded systems.
 ]

@@ -8,7 +8,7 @@
 // const color
 #let color-darknight = rgb("#131A28")
 #let color-darkgray = rgb("#333333")
-#let color-gray = rgb("#5d5d5d")
+#let color-gray = rgb("#333333")
 #let default-accent-color = rgb("#262F99")
 #let default-location-color = rgb("#333333")
 
@@ -221,11 +221,7 @@
 
   let desc = if description == none {
     (
-      lflib._linguify("resume", lang: language, from: lang_data).ok
-        + " "
-        + author.firstname
-        + " "
-        + author.lastname
+      lflib._linguify("resume", lang: language, from: lang_data).ok + " " + author.firstname + " " + author.lastname
     )
   } else {
     description
@@ -657,9 +653,7 @@
   show: body => context {
     set document(
       author: author.firstname + " " + author.lastname,
-      title: lflib
-        ._linguify("cover-letter", lang: language, from: lang_data)
-        .ok,
+      title: lflib._linguify("cover-letter", lang: language, from: lang_data).ok,
       description: desc,
       keywords: keywords,
     )
