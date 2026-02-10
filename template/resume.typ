@@ -37,6 +37,7 @@
 )
 
 #resume-item[
+  - Created a CRM platform for Succession Planners to network, track certification, manage client relationships, and automate workflows using AI.
   - Engineered a middleware extension for AnythingLLM to support Okta-based SSO authentication, enhancing security and user management for enterprise deployments.
   - Designed and developed backend for an Arabic transcription service with FastAPI and Celery.
   - Developed an automatic database documentation tool that enhances SchemaSpy by adding Mermaid diagrams and JSDoc with GenAI.
@@ -73,16 +74,6 @@
 ]
 
 = Projects
-
-#resume-entry(
-  title: "Error Lens",
-  location: [#github-link("sha-ahammed/error-lens")],
-  description: "Rust",
-)
-
-#resume-item[
-  - Extension for the Zed Editor that lets you see errors and warnings inline.
-]
 
 #resume-entry(
   title: "FFSpeak",
