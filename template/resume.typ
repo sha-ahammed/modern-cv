@@ -1,4 +1,4 @@
-#import "@preview/modern-cv:0.9.0": *
+#import "../lib.typ": *
 
 #show: resume.with(
   author: (
@@ -23,6 +23,7 @@
   show-footer: false,
   show-address-icon: false,
   paper-size: "us-letter",
+  page-margin: (left: 15mm, right: 15mm, top: 10mm, bottom: 0mm),
   // contact-items-separator: box[#h(2pt)#text("|")#h(2pt)],
 )
 
@@ -93,7 +94,6 @@
     "Python",
     "JavaScript",
     "TypeScript",
-    "Rust",
     "SQL",
   ),
 )
