@@ -63,7 +63,7 @@
 #resume-entry(
   title: "Programmer",
   location: "Kochi, Kerala, India",
-  date: "2021",
+  date: "March 2021 - November 2021",
   description: "DOA, CUSAT",
 )
 
